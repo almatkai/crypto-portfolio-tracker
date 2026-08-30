@@ -1,0 +1,88 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "crypto-portfolio-tracker",
+  "title": "Crypto Portfolio Tracker",
+  "description": "Add crypto wallets by their addresses and track your entire portfolio.",
+  "icon": "extension-icon.png",
+  "author": "almatkai",
+  "platforms": [
+    "macOS",
+    "Windows"
+  ],
+  "categories": [
+    "Data",
+    "Finance"
+  ],
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "add-ethereum-address",
+      "title": "Add Ethereum Address",
+      "subtitle": "Crypto Portfolio Tracker",
+      "description": "Import an Ethereum address to add to your portfolio.",
+      "mode": "no-view",
+      "arguments": [
+        {
+          "name": "address",
+          "placeholder": "0x...",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "name",
+          "placeholder": "Main Eth Address",
+          "type": "text",
+          "required": false
+        }
+      ],
+      "platforms": [
+        "macOS",
+        "Windows"
+      ]
+    },
+    {
+      "name": "portfolio",
+      "title": "View Portfolio",
+      "subtitle": "Crypto Portfolio Tracker",
+      "description": "View the total value and breakdown of your crypto portfolio.",
+      "mode": "view",
+      "platforms": [
+        "macOS",
+        "Windows"
+      ]
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.104.1",
+    "@raycast/utils": "^2.2.2",
+    "viem": "^2.38.5"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "tsx": "^4.22.4",
+    "typescript": "^5.9.3"
+  },
+  "scripts": {
+    "build": "ray build -e dist",
+    "typecheck": "tsc --noEmit",
+    "test": "node --import tsx --test test/*.test.ts"
+  },
+  "id": "com.tezbar.crypto-portfolio-tracker",
+  "version": "0.1.0",
+  "tezbar": {
+    "schemaVersion": 1,
+    "platforms": [
+      "macos",
+      "windows"
+    ],
+    "linuxStatus": "coming-soon",
+    "repository": "https://github.com/almatkai/crypto-portfolio-tracker",
+    "upstream": {
+      "repository": "https://github.com/raycast/extensions",
+      "path": "extensions/crypto-portfolio-tracker",
+      "commit": "6734d85992290066fd31a7f5bee3cca3d3545a1a"
+    }
+  }
+}
