@@ -3,7 +3,7 @@
   "name": "crypto-portfolio-tracker",
   "title": "Crypto Portfolio Tracker",
   "description": "Add crypto wallets by their addresses and track your entire portfolio.",
-  "icon": "extension-icon.png",
+  "icon": "assets/extension-icon.png",
   "author": "almatkai",
   "platforms": [
     "macOS",
